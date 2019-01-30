@@ -4230,7 +4230,7 @@ declare function addEventListener<K extends keyof ServiceWorkerEventMap>(type: K
 declare function addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
 declare function removeEventListener<K extends keyof ServiceWorkerEventMap>(type: K, listener: (this: ServiceWorkerGlobalScope, ev: ServiceWorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
 declare function removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
-declare readonly clients: Clients;
+declare var clients: Clients;
 declare var onactivate: ((this: ServiceWorkerGlobalScope, ev: ExtendableEvent) => any) | null;
 declare var onfetch: ((this: ServiceWorkerGlobalScope, ev: FetchEvent) => any) | null;
 declare var oninstall: ((this: ServiceWorkerGlobalScope, ev: ExtendableEvent) => any) | null;
@@ -4240,7 +4240,7 @@ declare var onnotificationclose: ((this: ServiceWorkerGlobalScope, ev: Notificat
 declare var onpush: ((this: ServiceWorkerGlobalScope, ev: PushEvent) => any) | null;
 declare var onpushsubscriptionchange: ((this: ServiceWorkerGlobalScope, ev: PushSubscriptionChangeEvent) => any) | null;
 declare var onsync: ((this: ServiceWorkerGlobalScope, ev: SyncEvent) => any) | null;
-declare readonly registration: ServiceWorkerRegistration;
+declare var registration: ServiceWorkerRegistration;
 declare function skipWaiting(): Promise<void>;
 declare function addEventListener<K extends keyof ServiceWorkerGlobalScopeEventMap>(type: K, listener: (this: ServiceWorkerGlobalScope, ev: ServiceWorkerGlobalScopeEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
 declare function addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
